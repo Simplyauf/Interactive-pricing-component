@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	input[type="checkbox"]:checked + .checkbox-span {
+		@apply translate-x-[130%] md:translate-x-[140%];
+	}
+}

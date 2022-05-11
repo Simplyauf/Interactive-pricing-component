@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+		<link rel="stylesheet" href="output.css" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+
+		<title>Frontend Mentor | Interactive pricing component</title>
+
+		<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+		<style>
+			.attribution {
+				font-size: 11px;
+				text-align: center;
+			}
+			.attribution a {
+				color: hsl(228, 45%, 44%);
+			}
+
+			.slider-hand::-webkit-slider-thumb {
+				-webkit-appearance: none;
+				width: 50px;
+				height: 52px;
+				border-radius: 50%;
+				cursor: pointer;
+				border: 1px solid red;
+				border-color: rgb(247, 218, 218);
+				background: hsl(174, 86%, 45%) url("images/icon-slider.svg");
+
+				background-repeat: no-repeat;
+				background-size: 50%;
+				background-position: center;
+			}
+
+			.slider-hand::-webkit-slider-thumb:hover {
+				box-shadow: 0px 20px 48px hsl(174, 86%, 45%);
+			}
+		</style>
+	</head>
+	<body
+		class="h-[900px] bg-MainBg bg-[url('images/bg-pattern.svg')] bg-no-repeat pb-20 text-Text"
+	>
+		<div
+			class="bg-[url('images/pattern-circles.svg')] bg-center bg-no-repeat p-8 text-center"
+		>
+			<h2
+				class="mb-2 text-xl font-bold text-black lg:text-3xl laptop:text-3xl"
+			>
+				Simple, traffic-based pricing
+			</h2>
+			<p class="px-12">
+				Sign-up for our 30-day trial. No credit card required.
+			</p>
+		</div>
+		<main
+			class="absolute top-[200px] left-[5.5%] w-[90%] rounded-md bg-MainBg pt-8 shadow-2xl md:top-[20%] md:left-[25%] md:w-[55%] lg:left-[25%] lg:w-[55%] laptop:top-[20%] laptop:left-[30%] laptop:w-[55%] tablet:top-[20%] tablet:left-[15%] tablet:w-[75%]"
+		>
+			<div
+				class="grid grid-rows-3 gap-4 lg:grid-cols-2 lg:grid-rows-2 lg:items-center lg:justify-start lg:gap-6 laptop:items-center laptop:justify-between"
+			>
+				<h3
+					class="pageviews-cont order-1 mx-auto transition-[ease-in] lg:order-1 lg:mx-8 laptop:order-1 laptop:mx-12"
+				>
+					100k PAGEVIEWS
+				</h3>
+				<span
+					class="flex items-center justify-around order-3 gap-2 mx-auto lg:order-1 laptop:order-1"
+				>
+					<h2
+						class="price-cont text-3xl font-black text-black transition-[ease-in]"
+					>
+						$16.00
+					</h2>
+					<span class="period"> / month </span>
+				</span>
+
+				<div
+					class="order-2 mx-auto w-[90%] lg:order-2 lg:col-span-2 lg:mx-8 lg:w-[85%] laptop:order-2 laptop:col-span-2 laptop:mx-12"
+				>
+					<input
+						class="slider-hand h-3 w-[100%] appearance-none rounded-lg bg-SliderBar outline-none"
+						step="1"
+						type="range"
+						name=""
+						min="1"
+						max="5"
+						value="3"
+						id=""
+					/>
+				</div>
+			</div>
+
+			<section class="py-8">
+				<div
+					class="flex items-center justify-evenly text-[15px] md:justify-center md:gap-4 md:text-[16px]"
+				>
+					<span> Monthly billing </span>
+
+					<div>
+						<label
+							class="relative inline-block h-6 w-[43px] cursor-pointer rounded-2xl bg-ToggleBg hover:bg-SliderBg md:h-[28px] md:w-14"
+							for="checkbox"
+						>
+							<input
+								class="invisible"
+								type="checkbox"
+								name=""
+								id="checkbox"
+							/>
+							<span
+								class="checkbox-span absolute top-1 left-1 inline-block h-[15px] w-[15px] cursor-pointer rounded-[50%] bg-white md:h-5 md:w-5"
+							>
+							</span>
+						</label>
+					</div>
+
+					<span> Yearly Billing </span>
+					<span
+						class="rounded-lg bg-orange-300 py-1 px-2 text-[8px] text-orange-700"
+					>
+						-25%
+						<span> discount </span>
+					</span>
+				</div>
+			</section>
+
+			<section
+				class="flex flex-col items-center gap-2 border-t-2 p-[35px] pt-8 md:flex-row md:items-center md:justify-between md:px-[10%]"
+			>
+				<div
+					class="flex w-[70%] flex-col items-center md:w-[50%] md:items-start md:gap-[8px]"
+				>
+					<div class="flex">
+						<span class="mt-2 mr-4">
+							<img
+								class="w-3"
+								src="images/icon-check.svg"
+								alt="check"
+							/>
+						</span>
+						<h3>Unlimited websites</h3>
+					</div>
+					<div class="flex">
+						<span class="mt-2 mr-4">
+							<img
+								class="w-3"
+								src="images/icon-check.svg"
+								alt="check"
+							/>
+						</span>
+						<h3>100% data ownership</h3>
+					</div>
+					<div class="flex">
+						<span class="mt-2 mr-4">
+							<img
+								class="w-3"
+								src="images/icon-check.svg"
+								alt="check"
+							/>
+						</span>
+						<h3>Email reports</h3>
+					</div>
+				</div>
+
+				<button
+					class="btn mt-6 h-12 w-[60%] rounded-[24px] bg-CtaBg transition-all md:w-[40%] tablet:w-[50%]"
+				>
+					Start my trial
+				</button>
+			</section>
+		</main>
+
+		<!-- <div class="attribution">
+			Challenge by
+			<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+				>Frontend Mentor</a
+			>. Coded by <a href="#">Abdulazeez umarfaruk</a>.
+		</div> -->
+	</body>
+
+	<script src="app.js"></script>
+</html>
