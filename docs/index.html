@@ -48,7 +48,7 @@
 		class="h-[900px] bg-MainBg bg-[url('images/bg-pattern.svg')] bg-no-repeat pb-20 text-Text"
 	>
 		<div
-			class="bg-[url('images/pattern-circles.svg')] bg-center bg-no-repeat p-8 text-center"
+			class="bg-[url('images/pattern-circles.svg')] bg-center bg-no-repeat p-12 sm:p-12 mt-8 lg:p-16 text-center"
 		>
 			<h2
 				class="mb-2 text-xl font-bold text-black lg:text-3xl laptop:text-3xl"
@@ -60,7 +60,7 @@
 			</p>
 		</div>
 		<main
-			class="absolute top-[200px] left-[5.5%] w-[90%] rounded-md bg-MainBg pt-8 shadow-2xl md:top-[20%] md:left-[25%] md:w-[55%] lg:left-[25%] lg:w-[55%] laptop:top-[20%] laptop:left-[30%] laptop:w-[55%] tablet:top-[20%] tablet:left-[15%] tablet:w-[75%]"
+			class="absolute top-[200px] left-[5.5%] w-[90%] mt-8 rounded-md bg-MainBg pt-8 sm:mt-24 shadow-2xl md:top-[20%] md:left-[25%] md:w-[55%] lg:left-[25%] lg:w-[55%] laptop:top-[20%] laptop:left-[30%] laptop:w-[55%] tablet:top-[20%] tablet:left-[15%] tablet:w-[75%]"
 		>
 			<div
 				class="grid grid-rows-3 gap-4 lg:grid-cols-2 lg:grid-rows-2 lg:items-center lg:justify-start lg:gap-6 laptop:items-center laptop:justify-between"
@@ -99,13 +99,19 @@
 
 			<section class="py-8">
 				<div
-					class="flex items-center justify-evenly text-[15px] md:justify-center md:gap-4 md:text-[16px]"
+					class="flex items-center  text-[12px] tablet:text-[14px] gap:2px justify-center md:gap-4 md:text-[16px]"
 				>
 					<span> Monthly billing </span>
+					<span
+						class="rounded-lg invisible bg-orange-300 flex items-center h-[1.1rem] w-[28px] tablet:h-6 tablet:w-[44px] sm:h-6 sm:w-[44px] justify-center h- text-[8px] text-orange-700"
+					>
+						-25%
+						<span class="hidden tablet:block sm:block"> discount </span>
+					</span>
 
-					<div>
+					<div class="">
 						<label
-							class="relative inline-block h-6 w-[43px] cursor-pointer rounded-2xl bg-ToggleBg hover:bg-SliderBg md:h-[28px] md:w-14"
+							class="relative inline-block h-[1.1rem] w-[28px] tablet:h-6 tablet:w-[44px] sm:h-6 sm:w-[44px] cursor-pointer rounded-2xl bg-ToggleBg hover:bg-SliderBg md:h-[28px] md:w-14"
 							for="checkbox"
 						>
 							<input
@@ -115,18 +121,18 @@
 								id="checkbox"
 							/>
 							<span
-								class="checkbox-span absolute top-1 left-1 inline-block h-[15px] w-[15px] cursor-pointer rounded-[50%] bg-white md:h-5 md:w-5"
+								class="checkbox-span absolute top-1 left-1 inline-block h-[10px] w-[10px]  sm:h-[15px] sm:w-[15px] cursor-pointer rounded-[50%] bg-white md:h-5 md:w-5"
 							>
 							</span>
-						</label>
+						</label> 
 					</div>
 
 					<span> Yearly Billing </span>
 					<span
-						class="rounded-lg bg-orange-300 py-1 px-2 text-[8px] text-orange-700"
+						class="rounded-lg bg-orange-300 flex items-center h-[1.1rem] w-[28px] tablet:h-6 tablet:w-[44px] sm:h-6 sm:w-[44px] justify-center h- text-[8px] text-orange-700"
 					>
 						-25%
-						<span> discount </span>
+						<span class="hidden tablet:block sm:block"> discount </span>
 					</span>
 				</div>
 			</section>

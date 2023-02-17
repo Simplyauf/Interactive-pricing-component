@@ -44,7 +44,7 @@ function updatingValue(objectDataValues) {
 // toggling periods
 periodToggleBtn.addEventListener("change", (e) => {
 	if (!e.currentTarget.checked) {
-		period.innerHTML = "/ year";
+		period.innerHTML = "/ month";
 		updatingValue(objectData);
 		displayValueInSliderBar(objectData);
 	} else {
